@@ -1,11 +1,23 @@
+
 ## SASAV: Self-Directed Agent for Scientific Analysis and Visualization
 
  Agentic AI to automate the initial analysis and viuslaizaiton for scientific data.
 
 ![Autonomous Agent](assets/autonomy.png)
 
-### 1. Agent
-Agentic AI controlling the workflows, "agent" folder.
+### 1. Required Packages
+#### OpenAI Python API library and OpenAI Agents SDK
+```bash
+pip install openai openai-agents
+```
+#### Langchain related packages
+```bash
+pip install langchain-chroma langchain-openai langchain-community langchain-huggingface
+```
+#### Others
+```bash
+pip install dearpygui pymupdf4llm tiktoken ipython
+```
 
 ### 2. Visualization Tools
 Visualization tools for agent to call as needed, "vtk" folder.
@@ -30,4 +42,3 @@ cmake ..  \
 -DVTK_DIR:PATH=path_to_VTK_DVR-MFA_installation_folder
 ```
 *path_to_mfa_include_folder* is the folder location in the project folder in step 2. *path_to_VTK_DVR-MFA_installation_folder* is the installation location when you configure VTK_DVR-MFA before building, and it is normally at */usr/local/include/vtk-version* by default.
-
