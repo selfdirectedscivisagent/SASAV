@@ -1,4 +1,3 @@
-
 ## SASAV: Self-Directed Agent for Scientific Analysis and Visualization
 
  Agentic AI to automate the initial analysis and viuslaizaiton for scientific data.
@@ -16,7 +15,7 @@ pip install langchain-chroma langchain-openai langchain-community langchain-hugg
 ```
 #### Others
 ```bash
-pip install dearpygui pymupdf4llm tiktoken ipython
+pip install dearpygui pymupdf4llm tiktoken ipython vtk
 ```
 
 ### 2. Visualization Tools
@@ -33,7 +32,6 @@ Visualization tools for agent to call as needed, "vtk" folder.
     * Another use full resource can be found [here](https://www.cs.purdue.edu/homes/xmt/classes/CS530/spring2018/project0.html)
 2. TODO: Get and build example code
 ```bash
-git clone https://github.com/sunjianxin/vtk
 cd vtk
 mkdir build
 cd build
@@ -42,3 +40,10 @@ cmake ..  \
 -DVTK_DIR:PATH=path_to_VTK_DVR-MFA_installation_folder
 ```
 *path_to_mfa_include_folder* is the folder location in the project folder in step 2. *path_to_VTK_DVR-MFA_installation_folder* is the installation location when you configure VTK_DVR-MFA before building, and it is normally at */usr/local/include/vtk-version* by default.
+
+### 3. Run SASAV
+```bash
+cd code
+python UI.py
+```
+

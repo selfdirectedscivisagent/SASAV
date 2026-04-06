@@ -26,9 +26,10 @@ def log(msg: str):
 
 def run_agent():
     api_key = dpg.get_value("api_key_input")
+    print("input key: ", api_key)
     model_name = dpg.get_value("model_name_input")
-    model_name = "gpt-4.1-nano"
-    # model_name = "gpt-5.2"
+    # model_name = "gpt-4.1-nano"
+    model_name = "gpt-5.4"
     file_path = dpg.get_value("file_path_input")
     # file_path = "/home/user/abdomen.dat"
     knowledge_base_db_path = dpg.get_value("knowledge_base_db_path_input")
@@ -42,7 +43,7 @@ def run_agent():
     # file_path = "/home/js/ws/proactiveSciVisAgent/proactiveSciVisAgent/data/miranda_256x256x256.vtk"
     # file_path = "/home/js/ws/proactiveSciVisAgent/proactiveSciVisAgent/data/richtmyer_256x256x240.vtk"
     # file_path = "/home/js/ws/proactiveSciVisAgent/proactiveSciVisAgent/agent/abdomenatlas_label.vtk"
-    file_path = "/home/js/ws/proactiveSciVisAgent/proactiveSciVisAgent/data/chameleon_256x256x270.vtk"
+    # file_path = "/home/js/ws/proactiveSciVisAgent/proactiveSciVisAgent/data/chameleon_256x256x270.vtk"
 
     iterative = dpg.get_item_user_data("iterative_toggle_btn")
     log(f"HPC: {iterative}")
@@ -143,7 +144,7 @@ GAP = 10
 
 with dpg.window(label="Configuration", width=CONFIG_W, height=CONFIG_H, pos=(0, 0)):
     dpg.add_text("Foundation Model Name:")
-    dpg.add_input_text(tag="model_name_input", hint="e.g. gpt-4o-mini", width=480)
+    dpg.add_input_text(tag="model_name_input", hint="e.g. gpt-5.4", width=480)
 
     dpg.add_spacer(height=8)
     dpg.add_text("Foundation Model API Key:")
@@ -166,7 +167,7 @@ with dpg.window(label="Configuration", width=CONFIG_W, height=CONFIG_H, pos=(0, 
         dpg.add_text("Utilize HPC: ")
         dpg.add_button(
             tag="iterative_toggle_btn",
-            label="ON",
+            label="OFF",
             user_data=True,
             callback=toggle_iterative
         )

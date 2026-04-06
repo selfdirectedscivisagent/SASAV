@@ -15,6 +15,7 @@ knowledge
 
 # Intermediate results
 workspace/
+workspace_test/
 *.jsonl
 
 # C extensions
